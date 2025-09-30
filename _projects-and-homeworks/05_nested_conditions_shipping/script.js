@@ -28,3 +28,68 @@
 // - If isExpress === "yes" → add 15
 //
 // STEP 6: DISPLAY TOTAL AS A NICE MESSAGE
+
+//----------------------------------------------------------------------------
+
+// STEP 1: GET ELEMENTS
+// - select#country, input#weight, select#isExpress, button#calcBtn, p#result
+const country = document.getElementById("country");
+const weight = document.getElementById("weight");
+const isExpress = document.getElementById("isExpress");
+const calcBtn = document.getElementById("calcBtn");
+const result = document.getElementById("result");
+
+// STEP 2: LISTEN FOR CLICK
+// - Parse weight as Number; validate it.
+// - Read isExpress selection ("yes"/"no") and country code.
+
+calcBtn.addEventListener("click", () => {
+    const weightValue = weight.valueAsNumber;
+
+    if (Number.isNaN(weightValue)) {
+        result.textContent = "Please enter a valid number";
+    }
+
+    const isExpressValue = isExpress.value;
+    const countryCode = country.value;
+
+// STEP 3: START WITH baseCost BY COUNTRY (if / else if / else)
+// - If country === "US" → baseCost = 5
+// - Else if country === "CA" → baseCost = 7
+// - Else → baseCost = 10
+    let baseCost;
+    if (countryCode === "US") {
+        baseCost = 5;
+    } else if (countryCode === "CA") {
+        baseCost = 7;
+    } else {
+        baseCost = 10;
+    }
+
+// STEP 4: ADD WEIGHT SURCHARGE (nested conditions)
+// - If weight > 5 → add 10
+// - Else if weight > 1 → add 5
+// - Else → add 0
+    let surcharge;
+    if (weightValue > 5) {
+        surcharge = 10;
+    } else if (weightValue > 1) {
+        surcharge = 5;
+    } else {
+        surcharge = 0;
+    }
+// STEP 5: EXPRESS OPTION
+// - If isExpress === "yes" → add 15
+    let expressCharge;
+    if (isExpressValue === "yes") {
+        expressCharge = 15;
+    } else {
+        expressCharge = 0;
+    }
+
+// STEP 6: DISPLAY TOTAL AS A NICE MESSAGE
+
+    const total = baseCost + surcharge + expressCharge;
+    weight.value = "";
+    result.textContent = `Total Shipping Cost: $${total}`;
+})

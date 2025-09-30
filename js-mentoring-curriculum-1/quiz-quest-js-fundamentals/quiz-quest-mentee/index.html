@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- STEP 1: Make sure your website works on mobile too.
+         This line tells the browser to scale your layout properly.
+         Do NOT delete it. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STEP 2: Set the title that appears on the browser tab.
+         You can change the emoji if you want! -->
+    <title>Quiz Quest 🧙‍♂️</title>
+
+    <!-- STEP 3: Connect this HTML file to a CSS file called "styles.css".
+         This is where your background, fonts, colors, and button styles will live.
+         Make sure styles.css is saved in the same folder as this file. -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- 🧙‍♂️ STEP 4: Create the "Start Screen"
+         This is what the player sees first.
+         Create a <section> with id="start-screen".
+         Give it the class "screen" so it's styled like a game screen.
+         Add an extra class "showing" so it appears first when the page loads.
+         Inside it, add:
+         - An <h1> tag for the game title
+         - A <p> tag with a short welcome message
+         - A <button> with id="start-btn" and class="btn primary" that says "Start Quest"
+         JavaScript will later detect when this button is clicked to begin the game.
+    -->
+
+    <!-- 🧠 STEP 5: Create the "Question Screen"
+         This is where the player will answer quiz questions.
+         Use a <section> with id="question-screen" and class="screen hidden".
+         (The "hidden" class means it's invisible until we want to show it using JavaScript.)
+
+         Inside it, add:
+         1. A <div> with id="timer" and aria-live="polite" – this shows the countdown clock.
+         2. An <h2> with id="question-text" – JavaScript will insert the question text here.
+         3. A <div> with id="answers" and class="answers" – this will be filled with answer buttons using JS.
+    -->
+
+    <!-- 🎉 STEP 6: Create the "Result Screen"
+         After the last question, we show the player their results.
+         Use a <section> with id="result-screen" and class="screen hidden".
+
+         Inside it, add:
+         1. A <h2> with id="result-message" and aria-live="polite" – shows a custom message.
+         2. A <p> with id="final-score" – shows something like "You scored 3 / 4".
+         3. A <button> with id="restart-btn" and class="btn secondary" – when clicked, it restarts the game.
+    -->
+
+    <!-- 🧩 STEP 7: Link your JavaScript file
+         Create a file named "script.js" in the same folder as this HTML file.
+         This is where ALL your game logic will go – from switching screens to checking answers.
+
+         This line loads that file. Leave it at the very bottom of <body>.
+    -->
+    <script src="script.js"></script>
+  </body>
+</html>

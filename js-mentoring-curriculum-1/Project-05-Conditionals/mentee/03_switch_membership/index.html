@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Membership Tiers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        margin: 24px;
+      }
+      .card {
+        max-width: 520px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      select,
+      button {
+        display: block;
+        margin: 8px 0;
+      }
+      #result {
+        margin-top: 12px;
+        font-weight: 600;
+      }
+      button {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Switch Membership Tiers</h1>
+      <label for="tierSelect">Choose your tier:</label>
+      <select id="tierSelect">
+        <option value="bronze">bronze</option>
+        <option value="silver">silver</option>
+        <option value="gold">gold</option>
+      </select>
+      <button id="showBtn">Show Benefits</button>
+      <p id="result" aria-live="polite"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

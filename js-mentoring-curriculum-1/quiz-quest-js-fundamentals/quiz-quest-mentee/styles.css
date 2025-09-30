@@ -1,0 +1,108 @@
+/* =========================================
+   Quiz Quest – styles.css
+   Fantasy Scroll / Spellbook Theme
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap");
+
+:root {
+  --parchment: #fdf5e6;
+  --ink: #3b2f2f;
+  --accent: #8b0000;
+  --correct: #4caf50;
+  --wrong: #f44336;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Uncial Antiqua", serif;
+  background: var(--parchment);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.screen {
+  max-width: 480px;
+  width: 100%;
+  background: var(--parchment);
+  border: 8px solid var(--ink);
+  padding: 2rem 1.5rem;
+  border-image: url("https://i.imgur.com/MaYkznG.png") 30 round;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.2rem;
+}
+h2 {
+  margin-top: 0;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+.btn.primary {
+  background: var(--accent);
+  color: var(--parchment);
+}
+.btn.secondary {
+  background: var(--ink);
+  color: var(--parchment);
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+#timer {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.answer-btn {
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.answer-btn.correct {
+  background: var(--correct);
+  border-color: var(--ink);
+}
+.answer-btn.wrong {
+  background: var(--wrong);
+  border-color: var(--ink);
+}

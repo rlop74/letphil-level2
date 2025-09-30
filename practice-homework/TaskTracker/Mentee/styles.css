@@ -1,0 +1,24 @@
+/* =======================================================================
+   PROJECT: TaskTracker Lite — DOM + Events
+   PURPOSE: Add visuals (colors, spacing, layout) to the HTML structure.
+
+   ✅ REQUIRED CLASS NAMES:
+     .header, .container, .task-item, .task-text, .btn,
+     .complete, .delete, .done
+   ✅ THEME CLASS:
+     body.dark
+======================================================================= */
+
+/* STEP A: Base styles with CSS variables in :root and overrides in body.dark */
+
+/* STEP B: Style .header and .container for layout */
+
+/* STEP C: Style #taskForm, #taskInput, #addBtn, #themeBtn */
+
+/* STEP D: Style #status for feedback */
+
+/* STEP E: Style #taskList, .task-item, .task-text, and add .done */
+
+/* STEP F: Style .btn, .btn.complete, .btn.delete */
+
+/* STEP G: Add media query for responsive stacking */

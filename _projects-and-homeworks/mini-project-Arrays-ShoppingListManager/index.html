@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project — Shopping List Manager</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        padding: 1.2rem;
+      }
+      button {
+        padding: 0.45rem 0.9rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #f5f5f5;
+      }
+      ul {
+        margin-top: 0.6rem;
+        padding-left: 1.2rem;
+      }
+      #output,
+      #status {
+        margin-top: 0.6rem;
+        padding: 0.6rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        min-height: 1.2rem;
+      }
+      input {
+        margin-right: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini Project — Shopping List Manager</h1>
+    <input id="itemInput" placeholder="Add item" />
+    <button id="addBtn" type="button">Add</button>
+    <button id="removeBtn" type="button">Remove Last</button>
+    <button id="clearBtn" type="button">Clear</button>
+    <ul id="list"></ul>
+    <div id="countLabel"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

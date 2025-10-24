@@ -1,0 +1,31 @@
+/* Base theme variables */
+:root {
+  --bg: #ffffff;
+  --fg: #222;
+  --card: #f7f7f9;
+  --border: #00000018;
+}
+
+body.dark {
+  --bg: #0f1115;
+  --fg: #e7e7ea;
+  --card: #171923;
+  --border: #ffffff22;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--fg); }
+.app { max-width: 760px; margin: 40px auto; padding: 20px; }
+
+h1 { margin-top: 0; }
+section, .section { background: var(--card); border: 1px solid var(--border); padding: 16px; border-radius: 12px; margin-bottom: 14px; }
+button { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); background: transparent; cursor: pointer; }
+button:hover { filter: brightness(0.95); }
+
+.controls { display: flex; gap: 8px; align-items: center; }
+#taskList { padding-left: 1.1rem; }
+.card { background: var(--card); border: 1px dashed var(--border); padding: 20px; border-radius: 12px; text-align: center; transition: transform 120ms ease, box-shadow 120ms ease; }
+.card.highlight { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+li { display: flex; align-items: center; gap: 8px; }
+li button { font-size: 12px; padding: 4px 8px; }

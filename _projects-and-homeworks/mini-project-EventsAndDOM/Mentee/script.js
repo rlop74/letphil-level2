@@ -265,5 +265,5 @@ hoverCard.addEventListener("mouseout", () => {
 // STEP I — BONUS IDEAS
 // - Disable Add button when input is empty (use .disabled = true/false) -- done
 // - Pressing Ctrl+Enter adds a task with "High" priority automatically -- done
-// - Persist tasks to localStorage and load them on page load
+// - Persist tasks to localStorage and load them on page load -- done
 
